@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508014301) do
+ActiveRecord::Schema.define(version: 20180508015457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "booked_gym_sessions", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gym_session_id"
+    t.bigint "gym_id"
     t.datetime "date_from"
     t.datetime "date_until"
     t.string "stripe_charge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gym_session_id"], name: "index_booked_gym_sessions_on_gym_session_id"
+    t.index ["gym_id"], name: "index_booked_gym_sessions_on_gym_id"
     t.index ["user_id"], name: "index_booked_gym_sessions_on_user_id"
   end
 
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 20180508014301) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "booked_gym_sessions", "gym_sessions"
+  add_foreign_key "booked_gym_sessions", "gym_sessions", column: "gym_id"
   add_foreign_key "booked_gym_sessions", "users"
   add_foreign_key "gym_sessions", "users"
   add_foreign_key "gyms", "users"
