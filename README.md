@@ -17,49 +17,42 @@ The app allows trainers to find gyms that allow for casual fee payments to use t
     
 I spent a lot of time looking at other website designs to develop some ideas for my site.  
 
-I found one site that I really liked and decided to stick with it. Have a look at the images below:
+I stumbled across the Uber website and liked its setout and design, I decided to use it to inspire my design. Have a look at the images below:
 
 MOBILE VIEW:
 
-<!-- ![mobile](/app/assets/readme/erd.png) -->
-<!-- PUT MOBILE IMAGE HERE -->
+
+![mobile](/docs/images/mobile-inspiration.png) 
 
 DESKTOP VIEW:
 
-<!-- ![desktop](assets/readme/desktop-inspiration.png) -->
+![desktop](/docs/images/desktop-inspiration.png)
 <!-- PUT DESKTOP IMAGE HERE -->
 
 ## **Colors**
 
-I got my color inspiration from old art and architecture. I travelled to Turkey last year and I really liked the Ottoman art and architecture. I found the colors beautiful and made me feel at ease. They used colors that made you feel calm and warm. I wanted my personal website to have the same impact on the viewer, and so I dervied my color palettes from some of the Ottoman buildings. I was able to do this using a color palette tool extension on google chrome. Below are the images of the buildings I chose to derive my colour palettes from. 
+I got my color inspiration from modern design and architecture. I was a part of the building of a local centre which has won many awards for its great design and architecture. This centre is known as 'The Australian Islamic Centre', located in Melbourne's West. This has a personal feel because I visit this centre on a daily basis and it is the home of our community. 
 
-OTTOMAN BUILDINGS:
+I wanted my personal website to have the same impact on the viewer, and so I dervied my color palettes from some parts of the building. I was able to do this using a color palette tool extension on google chrome. Below are the images of the buildings I chose to derive my colour palettes from. The images are shot from different sections of the centre. 
 
-<!-- ![colors](app/assets/readme/colors.png) -->
-<!-- PUT COLORS IMAGE HERE -->
+AUSTRALIAN ISLAMIC CENTRE:
+
+![colors](docs/images/color-inspiration.png)
+
 
 The image below is the color scheme for my website:
 
-<!-- PUT COLOR SCHEME IMAGE HERE -->
-
-<!-- ![scheme](assets/readme/color-scheme.png) -->
+![scheme](docs/images/colors-scheme.png)
 
 
 # **Fonts**
 
 I chose 3 fonts of each of serif, san serif and classic. 
 
-<!-- ![fonts](assets/readme/fonts.png) -->
-<!-- PUT FONTS IMAGE HERE -->
+![fonts](docs/images/fonts.png)
 
 
-<!-- # **Drafts**
 
-Here are the drafts of my work, I played around with it until I got to my final design. 
 
-![drafts](assets/readme/drafts-mobile.png)
 
-Below is an image of my whole design process:
-
-![figma](assets/readme/figma.png) -->
 
