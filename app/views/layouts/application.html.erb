@@ -9,6 +9,15 @@
   </head>
 
   <body>
+
+    <% unless user_signed_in?%>
+
+      <%#signed in%>
+      <%#signed up%>
+
+
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
