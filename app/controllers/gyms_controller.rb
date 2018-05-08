@@ -25,7 +25,7 @@ class GymsController < ApplicationController
   # POST /gyms.json
   def create
     @gym = Gym.new(gym_params)
-
+    
     respond_to do |format|
       if @gym.save
         format.html { redirect_to @gym, notice: 'Gym was successfully created.' }
