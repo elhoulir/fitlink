@@ -1,0 +1,52 @@
+<%= form_with(model: gym, local: true) do |form| %>
+  <% if gym.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gym.errors.count, "error") %> prohibited this gym from being saved:</h2>
+
+      <ul>
+      <% gym.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :gym_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :gym_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abn %>
+    <%= form.text_field :abn, id: :gym_abn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :gym_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_number %>
+    <%= form.text_field :contact_number, id: :gym_contact_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_data %>
+    <%= form.text_area :image_data, id: :gym_image_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :gym_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
