@@ -10,12 +10,21 @@
 
   <body>
 
-    <% if user_signed_in?%>
+    <nav>
+        <% unless user_signed_in?%>
 
-      <%# sign out%>
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <%#sign in%>
+          <%= link_to 'Sign In', new_user_session_path %>
+          
+          <%#sign up%>
+          <%= link_to 'Sign Up',  new_user_registration_path %>
+        <%else%>
 
-    <% end %>
+          <%# sign out%>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+
+        <% end %>
+    </nav>
 
     <%= yield %>
   </body>
