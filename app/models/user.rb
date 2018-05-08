@@ -14,7 +14,7 @@ class User < ApplicationRecord
   def create_profile
     Profile.create!([
       {
-        user_id :self.id
+        user_id: self.id
       }
     ])
   end
