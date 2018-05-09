@@ -1,0 +1,49 @@
+<%# Gym Name %>
+
+<h1><%= @gym.name %></h1>
+
+<h2> New sessions </h2>
+
+<%= form_with(model: @gym_gym_session, local: true) do |form| %>
+  <% if @gym_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gym_session.errors.count, "error") %> prohibited this gym_session from being saved:</h2>
+
+      <ul>
+      <% @gym_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :days_of_week %>
+    <%= form.select :day, [['Monday', 1], ['Tuesday', 2], ['Wednesday', 3], ['Thursday', 4], ['Friday', 5], ['Saturday', 6], ['Sunday', 7]] %> 
+     <%# include_blank: true%>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_from %>
+    <%= form.text_area :time_from, id: :gym_session_time_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_until %>
+    <%= form.text_field :time_until, id: :gym_session_time_until %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hourly_price %>
+    <%= form.text_field :hourly_price, id: :gym_session_hourly_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weeks_in_advance %>
+    <%= form.text_field :weeks_in_advance, id: :gym_session_weeks_in_advance %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

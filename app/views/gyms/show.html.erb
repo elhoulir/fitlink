@@ -31,8 +31,7 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @gym.user %>
+  <%= link_to 'New session', new_gym_gym_session_path(@gym) %>
 </p>
 
 <%= link_to 'Edit', edit_gym_path(@gym) %> |

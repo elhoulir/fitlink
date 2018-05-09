@@ -8,6 +8,7 @@ class ProfileController < ApplicationController
     
   end
 
+
   def update
     if @profile.update(profile_params)
       flash[:notice] = "profile updated"
