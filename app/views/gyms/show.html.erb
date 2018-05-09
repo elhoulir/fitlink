@@ -1,46 +1,47 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @gym.name %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @gym.description %>
-</p>
 
-<p>
-  <strong>Abn:</strong>
-  <%= @gym.abn %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @gym.name %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @gym.address %>
-</p>
+    <p>
+      <strong>Description:</strong>
+      <%= @gym.description %>
+    </p>
 
-<p>
-  <strong>Contact number:</strong>
-  <%= @gym.contact_number %>
-</p>
+    <p>
+      <strong>Abn:</strong>
+      <%= @gym.abn %>
+    </p>
 
-<p>
-  <strong>Image data:</strong>
-  <%= @gym.image_data %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @gym.address %>
+    </p>
+
+    <p>
+      <strong>Contact number:</strong>
+      <%= @gym.contact_number %>
+    </p>
+
+    <p>
+      <strong>Image data:</strong>
+      <%= @gym.image_data %>
+    </p>
 
 <%= link_to 'Edit', edit_gym_path(@gym) %> |
 <%= link_to 'Back', gyms_path %>
-
 
 <p>
   <%= link_to 'New session', new_gym_gym_session_path(@gym) %>
 </p>
 
-<ul>
+<div class = "choices">
   <% @gym_sessions.each do |session| %>
-    <li>
+    
       <%= session.id %>
       <%= session.day_of_week %>
       <%= session.time_from %>
@@ -48,9 +49,7 @@
       <%= session.weeks_in_advance %>
       <%= session.hourly_price %>
       <%= link_to 'Book this session', book_gym_gym_session_path(@gym, session), method: :post %>
-      
-      
-      </li>
+    
   <% end %>
-</ul>
-
+</div>
+</div>

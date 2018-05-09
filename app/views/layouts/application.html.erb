@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FitLink</title>
-    <%= csrf_meta_tags %>
+
+<head>
+  <title>FitLink</title>
+  <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-  <body>
+<body>
+  <main>
 
+  <div class = "top">
     <nav>
-        <%= link_to 'Home', root_path %>
-      
-        <%= link_to 'Profile', profile_path %>  
-        <% unless user_signed_in?%>
+        <div class="menu">
+        <ul>
 
-          <%#sign in%>
-          <%= link_to 'Sign In', new_user_session_path %>
-          
-          <%#sign up%>
-          <%= link_to 'Sign Up',  new_user_registration_path %>
-        <%else%>
+            <li> <%= link_to 'Home', root_path %></li>
+            <li> <%= link_to 'Profile', profile_path %></li>
+            <li> <%# link_to 'Gyms', gyms_path %> </li>
+          <% unless user_signed_in?%>
 
-          <%# sign out%>
-          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-        <% end %>
+           <li>  <%=  link_to 'Sign In', new_user_session_path %> </li>
+             <li> <%= link_to 'Sign Up',  new_user_registration_path %> </li>
+          <% else %>
+
+             <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
+
+          <% end %>
+        </ul>  
+
+          <div class = "brand"> <h1> Fit Link </h1> </div>
+
+
+        </div>
     </nav>
+  </div>
 
-    <%= yield %>
-  </body>
+  </main>
+  <%= yield %>
+</body>
+
 </html>
-
