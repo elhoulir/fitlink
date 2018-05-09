@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  get '/profile', to: 'profile#show'
+  patch '/profile', to: 'profile#update'
+  get '/profile/edit', to: 'profile#edit'
+
+
   root 'pages#home'
   
   resources :gyms do

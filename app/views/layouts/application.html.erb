@@ -11,6 +11,9 @@
   <body>
 
     <nav>
+        <%= link_to 'Home', root_path %>
+      
+        <%= link_to 'Profile', profile_path %>  
         <% unless user_signed_in?%>
 
           <%#sign in%>
@@ -22,7 +25,6 @@
 
           <%# sign out%>
           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-
         <% end %>
     </nav>
 

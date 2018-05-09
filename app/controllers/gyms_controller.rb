@@ -25,7 +25,7 @@ class GymsController < ApplicationController
   # POST /gyms.json
   def create
     @gym = Gym.new(gym_params)
-    
+    @gym.user = current_user
     respond_to do |format|
       if @gym.save
         format.html { redirect_to @gym, notice: 'Gym was successfully created.' }
@@ -69,6 +69,6 @@ class GymsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gym_params
-      params.require(:gym).permit(:name, :description, :abn, :address, :contact_number, :image_data, :user_id)
+      params.require(:gym).permit(:name, :description, :abn, :address, :contact_number, :image)
     end
 end
