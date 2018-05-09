@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   resources :gyms do
-    resources :gym_sessions, only: [:create, :new]
+  
+    resources :gym_sessions, only: [:create, :new] do 
+      member do 
+        post :book
+      end
+    end
   end
   
   devise_for :users

@@ -23,6 +23,10 @@ class GymsController < ApplicationController
   def edit
   end
 
+  def book
+
+  end
+
   # POST /gyms
   # POST /gyms.json
   def create

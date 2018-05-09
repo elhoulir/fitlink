@@ -47,7 +47,7 @@
       <%= session.time_until %>
       <%= session.weeks_in_advance %>
       <%= session.hourly_price %>
-      
+      <%= link_to 'Book this session', book_gym_gym_session_path(@gym, session), method: :post %>
       
       
       </li>
