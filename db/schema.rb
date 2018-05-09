@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508063409) do
+ActiveRecord::Schema.define(version: 20180509061642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180508063409) do
   end
 
   create_table "gym_sessions", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "gym_id"
     t.integer "day_of_week"
     t.time "time_from"
     t.time "time_until"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20180508063409) do
     t.integer "weeks_in_advance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_gym_sessions_on_user_id"
+    t.index ["gym_id"], name: "index_gym_sessions_on_gym_id"
   end
 
   create_table "gyms", force: :cascade do |t|
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20180508063409) do
 
   add_foreign_key "booked_gym_sessions", "gym_sessions", column: "gym_id"
   add_foreign_key "booked_gym_sessions", "users"
-  add_foreign_key "gym_sessions", "users"
+  add_foreign_key "gym_sessions", "users", column: "gym_id"
   add_foreign_key "gyms", "users"
   add_foreign_key "profiles", "users"
 end

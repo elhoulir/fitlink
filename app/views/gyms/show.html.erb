@@ -30,9 +30,27 @@
   <%= @gym.image_data %>
 </p>
 
+<%= link_to 'Edit', edit_gym_path(@gym) %> |
+<%= link_to 'Back', gyms_path %>
+
+
 <p>
   <%= link_to 'New session', new_gym_gym_session_path(@gym) %>
 </p>
 
-<%= link_to 'Edit', edit_gym_path(@gym) %> |
-<%= link_to 'Back', gyms_path %>
+<ul>
+  <% @gym_sessions.each do |session| %>
+    <li>
+      <%= session.id %>
+      <%= session.day_of_week %>
+      <%= session.time_from %>
+      <%= session.time_until %>
+      <%= session.weeks_in_advance %>
+      <%= session.hourly_price %>
+      
+      
+      
+      </li>
+  <% end %>
+</ul>
+

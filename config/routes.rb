@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get '/profile', to: 'profile#show'
   patch '/profile', to: 'profile#update'
   get '/profile/edit', to: 'profile#edit'
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   resources :gyms do
-    resources :gym_sessions 
+    resources :gym_sessions, only: [:create, :new]
   end
   
   devise_for :users

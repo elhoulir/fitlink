@@ -1,15 +1,17 @@
 class GymsController < ApplicationController
-  before_action :set_gym, only: [:show, :edit, :update, :destroy]
+  before_action :set_gym, only: [:show, :edit, :update, :destroy, :new_gym_session]
 
   # GET /gyms
   # GET /gyms.json
   def index
     @gyms = Gym.all
+    
   end
 
   # GET /gyms/1
   # GET /gyms/1.json
   def show
+    @gym_sessions = @gym.gym_sessions
   end
 
   # GET /gyms/new
@@ -71,4 +73,6 @@ class GymsController < ApplicationController
     def gym_params
       params.require(:gym).permit(:name, :description, :abn, :address, :contact_number, :image)
     end
+
+
 end
