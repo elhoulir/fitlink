@@ -10,6 +10,7 @@ class GymSessionsController < ApplicationController
        
         @new_gym_session = GymSession.new(gym_session_params)
         @new_gym_session.gym = @gym
+        puts @new_gym_session
         if @new_gym_session.save
          redirect_to gym_path(@gym)
         else

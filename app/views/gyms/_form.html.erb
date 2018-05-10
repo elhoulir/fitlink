@@ -40,7 +40,8 @@
 
       <div class="field">
         <%= form.label :image_data %>
-        <%= form.text_area :image_data, id: :gym_image_data %>
+        <%= form.hidden_field :image, value: gym.cached_image_data %>
+        <%= form.file_field :image, id: :gym_image_data %>
       </div>
 
       <div class="actions">

@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509061642) do
+ActiveRecord::Schema.define(version: 20180510032411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "booked_gym_sessions", force: :cascade do |t|
-    t.bigint "user_id"
     t.bigint "gym_id"
+    t.bigint "gym_session_id"
     t.datetime "date_from"
     t.datetime "date_until"
     t.string "stripe_charge_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gym_id"], name: "index_booked_gym_sessions_on_gym_id"
-    t.index ["user_id"], name: "index_booked_gym_sessions_on_user_id"
+    t.index ["gym_session_id"], name: "index_booked_gym_sessions_on_gym_session_id"
   end
 
   create_table "gym_sessions", force: :cascade do |t|
@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 20180509061642) do
     t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
-    t.datetime "date_of_birth"
     t.string "contact_number"
+    t.string "date_of_birth"
     t.string "address"
     t.string "drivers_license"
-    t.text "drivers_license_image_data"
+    t.text "license_image_data"
     t.text "photo_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -88,9 +88,9 @@ ActiveRecord::Schema.define(version: 20180509061642) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "booked_gym_sessions", "gym_sessions", column: "gym_id"
-  add_foreign_key "booked_gym_sessions", "users"
-  add_foreign_key "gym_sessions", "users", column: "gym_id"
+  add_foreign_key "booked_gym_sessions", "gym_sessions"
+  add_foreign_key "booked_gym_sessions", "gyms"
+  add_foreign_key "gym_sessions", "gyms"
   add_foreign_key "gyms", "users"
   add_foreign_key "profiles", "users"
 end

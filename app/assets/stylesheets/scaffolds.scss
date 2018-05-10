@@ -92,7 +92,7 @@
    justify-content: center;
     font-family: 'PT Sans';
     font-size: 25px;
-    margin: 0 auto;
+    margin: 10px;
     box-sizing: border-box;
 }
 
@@ -101,10 +101,11 @@ label {
     color: #1E3231;
     padding: 0em;
     margin: 2em;
+    font-size: 20px;
 }
 
 input, textarea {
-    width: 100%;
+  
     background: transparent;
     color: #5DA9E9;
     border: none;
@@ -112,7 +113,8 @@ input, textarea {
     border-bottom: 2px solid #5DA9E9;
     box-sizing: border-box;
     font-size: 20px;
-    padding: 1em;
+    padding-left: 1em;
+    margin-left: 5px;
 }
 
 .newgym {
@@ -123,4 +125,5 @@ input, textarea {
   font-size: 3em;
   padding-bottom: 20px;
 }
+
 

@@ -1,4 +1,5 @@
 
+<div class = "createdgym">
     <p id="notice"><%= notice %></p>
 
 
@@ -29,15 +30,15 @@
 
     <p>
       <strong>Image data:</strong>
-      <%= @gym.image_data %>
+      <%= image_tag @gym.image_url(:thumb) %>
     </p>
-
-<%= link_to 'Edit', edit_gym_path(@gym) %> |
-<%= link_to 'Back', gyms_path %>
 
 <p>
   <%= link_to 'New session', new_gym_gym_session_path(@gym) %>
 </p>
+<%= link_to 'Edit', edit_gym_path(@gym) %> |
+<%= link_to 'Back', gyms_path %>
+
 
 <div class = "choices">
   <% @gym_sessions.each do |session| %>
@@ -53,3 +54,5 @@
   <% end %>
 </div>
 </div>
+</div>
+

@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-session = GymSession.new
-session.gym_id = 1
-puts session.save!
+# session = GymSession.new
+# session.gym_id = 1
+# puts session.save!
+
+User.create!([
+    {
+    email: 'ruegen@example.com',
+    password: '12345678'
+}
+])

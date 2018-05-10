@@ -11,6 +11,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3' #authentication
 gem 'pundit', '~> 1.1' #authorisation
 gem 'shrine', '~> 2.10', '>= 2.10.1' 
 gem 'mailgun-ruby', '~> 1.1', '>= 1.1.9'
+gem 'image_processing', '~> 1.2'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
