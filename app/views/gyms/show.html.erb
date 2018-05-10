@@ -30,12 +30,16 @@
 
     <p>
       <strong>Image data:</strong>
-      <%= image_tag @gym.image_url(:thumb) %>
+      <%= image_tag @gym.image_url(:thumb) unless @gym.image_data.nil? %>
     </p>
 
+
+<% if current_user == @gym.user %>
 <p>
   <%= link_to 'New session', new_gym_gym_session_path(@gym) %>
 </p>
+<% end %>
+
 <%= link_to 'Edit', edit_gym_path(@gym) %> |
 <%= link_to 'Back', gyms_path %>
 
@@ -49,8 +53,9 @@
       <%= session.time_until %>
       <%= session.weeks_in_advance %>
       <%= session.hourly_price %>
+      <% unless current_user == @gym.user %>
       <%= link_to 'Book this session', book_gym_gym_session_path(@gym, session), method: :post %>
-    
+      <%end%>
   <% end %>
 </div>
 </div>

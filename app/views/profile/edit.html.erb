@@ -1,0 +1,63 @@
+<h1>Edit profile</h2>
+
+  <%= form_with(model: @profile, local: true) do |form| %>
+    <% if @profile.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+        <ul>
+        <% @profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class = "profileform">
+      <div class="profilename">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, id: :profile_name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :last_name %>
+        <%= form.text_area :last_name, id: :profile_last_name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :contact_number %>
+        <%= form.text_field :contact_number, id: :profile_contact_number %>
+      </div>
+
+      <div class="field">
+        <%= form.label :date_of_birth %>
+        <%= form.text_field :date_of_birth, id: :profile_date_of_birth %>
+      </div>
+
+      <div class="field">
+        <%= form.label :contact_number %>
+        <%= form.text_field :contact_number, id: :profile_contact_number %>
+      </div>
+
+      <div class="field">
+        <%= form.label :address %>
+        <%= form.text_field :address, id: :profile_address %>
+      </div>
+
+      <div class="field">
+        <%= form.label :drivers_license %>
+        <%= form.text_field :drivers_license, id: :profile_drivers_license %>
+      </div>
+
+      <div class="field">
+        <%= form.label :contact_number %>
+        <%= form.text_field :contact_number, id: :profile_contact_number %>
+      </div>
+
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
+  <% end %>
+

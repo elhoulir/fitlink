@@ -12,10 +12,10 @@ class ProfileController < ApplicationController
   def update
     if @profile.update(profile_params)
       flash[:notice] = "profile updated"
-      redirect_to @profile
+      redirect_to profile_path
     else
       flash[:alert] = "profile not updated"
-      redirect_to @profile
+      redirect_to root_path
     end 
   end
 
