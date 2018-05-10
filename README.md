@@ -1,3 +1,10 @@
+This link leads to the App's GitHub Repository:
+https://github.com/elhoulir/fitlink 
+
+This link leads to the app deployed onto heroku:
+
+
+
 # Major Rails Project
 
 ## App:
@@ -114,16 +121,19 @@ Head over to my full figma plan and design on this link https://www.figma.com/fi
 
 ## **Problems**
 
-Throughout the process of developing this app I encountered many problems which needed to be addressed. I mainly had problems in the development phase of the app. 
+Throughout the process of developing this app I encountered many problems, particuarly in the development phase of the app. I was still unclear with how some of the rails functions worked and therefore struggled to progress through with coding. Despite having learnt rails, I still didn't understand many of the basic concepts and this affected my development experience. Because of these problems, I was quite behind on my app and began to jam everything in a hurry. I wasn't able to complete my app to the standard I expected. At the moment, it isn't set as a two-sided market-place because I haven't got a payment and booking option in place. I failed to meet the basic requirements and have my stripe and mailgun API's setup. I also encountered big problems with my styling with CSS; I couldn't get my devise forms to look neat. 
 
 ## **Future Development and Project Improvements**
 
+I will continue to work and develop this app. I plan to keep adding features over time and hopefully in the future, have my app ready to pitch to potential investors and establish a business. 
+
 ## **Lessons Learnt**
+
+NEVER underestimate the level of difficulty in developing an app from scratch. It is hard enough coming up with a plan and design, let alone developing a fully functional app. I must be wary of how much time I have and be more efficient. Effectively planning is key and next time I build another app, I will pay extra care to the planning phase.
 
 ## **Overall Experience**
 
-
-
+Overall, a great experience. Despite the ups and downs, I have still overcome this challenge. Regardless of the outcome, I will always look back at this and keep improving. This experience has given me motivation to do well and focus more. My passion for web development has actually stengthen and I aim to capitalise on this. I'm happy to have done this. 
 
 
 
