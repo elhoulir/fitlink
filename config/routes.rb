@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   
+
+
   resources :gyms do
   
     resources :gym_sessions, only: [:create, :new] do 
