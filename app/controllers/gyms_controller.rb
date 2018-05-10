@@ -5,13 +5,12 @@ class GymsController < ApplicationController
   # GET /gyms.json
   def index
     @gyms = Gym.all
-    
   end
 
   # GET /gyms/1
   # GET /gyms/1.json
   def show
-    @gym_sessions = @gym.gym_sessions
+    @gym_sessions = @gym.gym_sessions 
   end
 
   # GET /gyms/new
@@ -24,7 +23,6 @@ class GymsController < ApplicationController
   end
 
   def book
-
   end
 
   # POST /gyms

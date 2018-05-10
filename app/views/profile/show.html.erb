@@ -29,9 +29,12 @@
     </p>
 
 
-
-
-
+<p>
+    <% if policy(@profile).edit? %>
+    <strong>Email: </strong>
+    <%=  @profile.user.email %> 
+  <% end %>
+</p>
 
 
 <%= link_to 'Update my profile', profile_edit_path %>

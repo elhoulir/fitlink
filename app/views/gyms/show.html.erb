@@ -40,7 +40,10 @@
 </p>
 <% end %>
 
-<%= link_to 'Edit', edit_gym_path(@gym) %> |
+<% if policy(@gym).edit? %>
+  <%=  link_to 'Edit', edit_gym_path(@gym) %> 
+<% end %>
+|
 <%= link_to 'Back', gyms_path %>
 
 
