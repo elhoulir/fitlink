@@ -2,7 +2,7 @@ This link leads to the App's GitHub Repository:
 https://github.com/elhoulir/fitlink 
 
 This link leads to the app deployed onto heroku:
-
+https://sleepy-anchorage-53999.herokuapp.com/
 
 
 # Major Rails Project
