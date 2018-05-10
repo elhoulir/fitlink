@@ -1,18 +1,16 @@
-<h2>This is your Profile Page</h2>
+<h2 class = "title">Profile Page</h2>
 
+<div class = "container">
 <p id="notice"><%= notice %></p>
 
-    
     <p>
       <strong>First Name:</strong>
       <%= @profile.first_name %>
     </p>
-
     <p>
       <strong>Last Name:</strong>
       <%= @profile.last_name %>
     </p>
-
     <p>
       <strong>Contact Number:</strong>
       <%= @profile.contact_number %>
@@ -41,3 +39,4 @@
 
 <%= link_to 'Create New Gym', new_gym_path %>
 
+</div>

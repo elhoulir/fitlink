@@ -1,8 +1,11 @@
+
+
 <p id="notice"><%= notice %></p>
 
-<h1>Gyms</h1>
-
-<table class="details">
+<h1 class = "title">Gyms List</h1>
+<div class = "gymlist">
+<div style="overflow-x:auto;">
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -15,7 +18,6 @@
       <th colspan="1"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @gyms.each do |gym| %>
       <tr>
@@ -26,11 +28,13 @@
         <td><%= gym.contact_number %></td>
         <td><%= image_tag gym.image_url(:thumb) unless gym.image_data.nil? %></td>
         <td><%= link_to 'Show', gym %></td>
+        
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
 <%# link_to 'New Gym', new_gym_path %>

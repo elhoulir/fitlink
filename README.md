@@ -41,9 +41,14 @@ AUSTRALIAN ISLAMIC CENTRE:
 ![colors](docs/images/color-inspiration.png)
 
 
-The image below is the color scheme for my website:
+The image below is the color scheme I used to decide on the colour palette to use for my app:
 
-![scheme](docs/images/colors-scheme.png)
+![colorscheme](docs/images/colors-scheme.png)
+
+
+Below is the color palette I decided to use for my app styling:
+
+![colorpalette](docs/images/color-palette.png)
 
 
 ## **Fonts**
@@ -103,6 +108,8 @@ This tool was very helpful for the design layout and planning of the app. I used
 Below is my final design plan for the mobile view of my app:
 
 ![mobileview](docs/images/mobile-view.png)
+
+Head over to my full figma plan and design on this link https://www.figma.com/file/09CbXaicrNpv0BhSPD1txbEi/Wire-Frames. 
 
 
 ## **Problems**

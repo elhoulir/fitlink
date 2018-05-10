@@ -16,7 +16,8 @@
 
  body {
     margin: 0px;
- }
+    
+}
 
 
 
@@ -61,12 +62,19 @@ li a:hover:not(.active) {
     background-color: #1E3231;
 }
 
-.active {
-    background-color:blue;
-}
-
-
 
 h1 {
     margin: 0;
 }
+
+.title {
+    font-size: 3em;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #5DA9E9;
+}
+
+
+
+

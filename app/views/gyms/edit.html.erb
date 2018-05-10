@@ -1,6 +1,10 @@
-<h1>Editing Gym</h1>
+<h1 class = "title">Editing Gym</h1>
 
-<%= render 'form', gym: @gym %>
+<div class ="gymform">
 
-<%= link_to 'Show', @gym %> |
-<%= link_to 'Back', gyms_path %>
+    <%= render 'form', gym: @gym %>
+
+</div>
+
+    <%= link_to 'Show', @gym %> 
+    <%= link_to 'Back', gyms_path %>

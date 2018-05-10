@@ -1,5 +1,6 @@
-<h1>Edit profile</h2>
+<h1 class = "title">Edit profile</h2>
 
+<div class="container">
   <%= form_with(model: @profile, local: true) do |form| %>
     <% if @profile.errors.any? %>
       <div id="error_explanation">
@@ -13,7 +14,7 @@
       </div>
     <% end %>
 
-    <div class = "profileform">
+
       <div class="profilename">
         <%= form.label :first_name %>
         <%= form.text_field :first_name, id: :profile_name %>
@@ -47,6 +48,6 @@
       <div class="actions">
         <%= form.submit %>
       </div>
-    </div>
+</div>
   <% end %>
 
